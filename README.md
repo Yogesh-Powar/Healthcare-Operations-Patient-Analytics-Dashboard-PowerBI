@@ -1,3 +1,7 @@
+# Healthcare-Operations-Patient-Analytics-Dashboard-PowerBI
+
+Interactive Power BI dashboard for healthcare operations and patient analytics, covering admissions, patients, departments, doctors, treatments, billing, KPIs, and business insights.
+
 ## Project Overview
 
 This project is an interactive healthcare analytics dashboard developed using Microsoft Power BI.
@@ -6,9 +10,9 @@ The dashboard analyzes patient demographics, hospital admissions, treatments, do
 
 ## Power BI Dashboard
 
-[Download Power BI Dashboard](./Healthcare%20Operations%20&%20Patient%20Analytics%20Dashboard.pbix)
+[Download Power BI Dashboard](./Healthcare%20Operations%20%26%20Patient%20Analytics%20Dashboard.pbix)
 
-## Dashboard Pages
+## Dashboard Preview
 
 ### Executive Overview
 
@@ -27,16 +31,9 @@ The dashboard analyzes patient demographics, hospital admissions, treatments, do
 ![Financial Analysis](Screenshots/Financial_Analysis.png)
 
 
-## Project Overview
-
-This project is an interactive healthcare analytics dashboard developed using Microsoft Power BI.
-
-The dashboard analyzes patient demographics, hospital admissions, treatments, doctor performance, department performance, and hospital billing data to generate meaningful KPIs, visual insights, and business findings.
-
-
 ## Dashboard Pages
 
-### 1. Executive Overview
+### Executive Overview
 
 Provides a high-level overview of hospital operations.
 
@@ -53,8 +50,12 @@ Provides a high-level overview of hospital operations.
 - Patient Outcome
 - Key Business Insights
 
+**Filters**
+- Date Range
+- Department
 
-### 2. Patient Analysis
+
+### Patient Analysis
 
 Provides analysis of patient demographics and patient-related characteristics.
 
@@ -72,7 +73,7 @@ Provides analysis of patient demographics and patient-related characteristics.
 - Insurance Provider
 
 
-### 3. Department & Doctor Analysis
+### Department & Doctor Analysis
 
 Analyzes hospital departments and doctor-level admission performance.
 
@@ -94,7 +95,7 @@ Analyzes hospital departments and doctor-level admission performance.
 - Doctor
 
 
-### 4. Financial Analysis
+### Financial Analysis
 
 Analyzes hospital revenue, insurance coverage, patient payable amounts, and payment status.
 
@@ -120,7 +121,7 @@ Analyzes hospital revenue, insurance coverage, patient payable amounts, and paym
 > **Note:** Collection Rate represents the percentage of billing records marked as **Paid**.
 
 
-## Key Business Insights
+## Key Insights
 
 ### Executive Overview
 
@@ -181,6 +182,8 @@ Admissions     1 ─────── * Treatments
 Admissions     1 ─────── 1 Billing
 DateTable      1 ─────── * Admissions
 ```
+The DateTable has an active relationship with AdmissionDate and an inactive relationship with DischargeDate, which is used for discharge analysis.
+
 ## Data Preparation
 
 Data preparation and validation were performed using **Power Query**.
@@ -288,7 +291,7 @@ CALCULATE(
 ## Project Structure
 
 ```text
-Healthcare-Operations-Patient-Analytics-PowerBI/
+Healthcare-Operations-Patient-Analytics-Dashboard-PowerBI/
 │
 ├── README.md
 ├── Healthcare Operations & Patient Analytics Dashboard.pbix
@@ -307,3 +310,52 @@ Healthcare-Operations-Patient-Analytics-PowerBI/
     ├── Department_Doctor_Analysis.png
     └── Financial_Analysis.png
 ```
+
+## Skills Demonstrated
+
+### Power BI
+
+- Dashboard Development
+- Data Visualization
+- KPI Development
+- Interactive Reporting
+- Slicers & Filters
+- Page Navigation
+- Bookmarks
+
+### Power Query
+
+- Data Cleaning
+- Data Transformation
+- Data Validation
+- Data Quality Checks
+
+### DAX
+
+- Aggregations
+- CALCULATE
+- DISTINCTCOUNT
+- DIVIDE
+- Date Intelligence
+- Filter Context
+- Conditional Measures
+
+### Data Analytics
+
+- Healthcare Operations Analysis
+- Patient Analysis
+- Department Performance Analysis
+- Doctor Performance Analysis
+- Financial Analysis
+- Business Insight Generation
+
+
+## Author
+
+**Yogesh Powar**
+
+Data Analyst | Business Analyst
+
+GitHub: [Yogesh-Powar](https://github.com/Yogesh-Powar)
+
+LinkedIn: [Yogesh Powar](https://www.linkedin.com/in/Yogesh-Powar/)
