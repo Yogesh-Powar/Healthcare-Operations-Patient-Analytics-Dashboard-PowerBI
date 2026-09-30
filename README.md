@@ -1,6 +1,14 @@
-# Healthcare-Operations-Patient-Analytics-PowerBI
-Interactive Power BI dashboard for healthcare operations and patient analytics, covering admissions, patients, departments, doctors, treatments, billing, KPIs, and business insights.
-## Dashboard Preview
+## Project Overview
+
+This project is an interactive healthcare analytics dashboard developed using Microsoft Power BI.
+
+The dashboard analyzes patient demographics, hospital admissions, treatments, doctor performance, department performance, and hospital billing data to generate meaningful KPIs, visual insights, and business findings.
+
+## Power BI Dashboard
+
+[Download Power BI Dashboard](./Healthcare%20Operations%20Patient%20Analytics%20Dashboard.pbix)
+
+## Dashboard Pages
 
 ### Executive Overview
 
@@ -171,5 +179,134 @@ Departments    1 ─────── * Admissions
 Departments    1 ─────── * Doctors
 Admissions     1 ─────── * Treatments
 Admissions     1 ─────── 1 Billing
-
 DateTable      1 ─────── * Admissions
+```
+## Data Preparation
+
+Data preparation and validation were performed using **Power Query**.
+
+Key activities included:
+
+- Data type validation
+- Duplicate checking
+- Missing value and error checking
+- Primary and foreign key validation
+- Admission and discharge date validation
+- Treatment cost validation
+- Billing validation
+- Financial consistency checks
+
+## DAX
+
+Created DAX measures to calculate key healthcare performance indicators and support interactive analysis.
+
+### Key Measures
+
+```DAX
+Total Patients =
+DISTINCTCOUNT(Patients[PatientID])
+
+Total Admissions =
+COUNTROWS(Admissions)
+
+Total Treatments =
+COUNTROWS(Treatments)
+
+Total Revenue =
+SUM(Billing[TotalAmount])
+
+Average Length of Stay =
+AVERAGE(Admissions[LengthOfStay])
+
+Payment Collection Rate =
+DIVIDE(
+    [Paid Payments],
+    COUNTROWS(Billing),
+    0
+)
+
+Total Discharges =
+CALCULATE(
+    COUNTROWS(Admissions),
+    USERELATIONSHIP(
+        DateTable[Date],
+        Admissions[DischargeDate]
+    )
+)
+
+```
+### Additional DAX measures were created for:
+
+- Insurance Covered
+- Patient Payable
+- Pending Payments
+- Paid Payments
+- Partially Paid Payments
+- Revenue Collection Rate
+- Year-over-Year Analysis
+
+### Calculated Columns & Grouping Logic
+
+- Patient Segmentation
+- Department Grouping
+- Revenue Grouping
+  
+## Interactive Features
+
+- Interactive slicers
+- KPI cards
+- Dynamic charts
+- Interactive tables
+- Page navigation
+- Reset Filters bookmark
+- Date-based analysis
+- Business insight sections
+
+
+## Tools & Technologies
+
+| Tool / Technology | Purpose |
+|---|---|
+| Microsoft Power BI | Dashboard development and visualization |
+| Power Query | Data cleaning and transformation |
+| DAX | Measures and calculations |
+| CSV | Source datasets |
+| GitHub | Project portfolio |
+
+
+## Dataset
+
+| Dataset | Records | Description |
+|---|---:|---|
+| Patients | 5,000 | Patient information |
+| Doctors | 50 | Doctor details |
+| Departments | 10 | Hospital department information |
+| Admissions | 10,000 | Patient admission records |
+| Treatments | 10,000 | Treatment details and costs |
+| Billing | 10,000 | Hospital billing information |
+
+> **Note:** This is a portfolio/practice project using a non-production dataset and does not contain real patient information.
+
+
+## Project Structure
+
+```text
+Healthcare-Operations-Patient-Analytics-PowerBI/
+│
+├── README.md
+├── Healthcare_Operations_Patient_Analytics.pbix
+│
+├── Dataset/
+│   ├── Patients.csv
+│   ├── Doctors.csv
+│   ├── Departments.csv
+│   ├── Admissions.csv
+│   ├── Treatments.csv
+│   └── Billing.csv
+│
+└── Screenshots/
+    ├── Executive_Overview.png
+    ├── Patient_Analysis.png
+    ├── Department_Doctor_Analysis.png
+    └── Financial_Analysis.png
+```
