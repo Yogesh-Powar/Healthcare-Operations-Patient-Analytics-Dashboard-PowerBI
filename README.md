@@ -122,7 +122,7 @@ Analyzes hospital revenue, insurance coverage, patient payable amounts, and paym
 
 ## Key Business Insights
 
-### Healthcare Operations
+### Executive Overview
 
 - Total Patients: **3,214**
 - Total Admissions: **5,054**
@@ -208,9 +208,6 @@ DISTINCTCOUNT(Patients[PatientID])
 
 Total Admissions =
 COUNTROWS(Admissions)
-
-Total Treatments =
-COUNTROWS(Treatments)
 
 Total Revenue =
 SUM(Billing[TotalAmount])
