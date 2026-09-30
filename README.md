@@ -6,7 +6,7 @@ The dashboard analyzes patient demographics, hospital admissions, treatments, do
 
 ## Power BI Dashboard
 
-[Download Power BI Dashboard](./Healthcare%20Operations%20Patient%20Analytics%20Dashboard.pbix)
+[Download Power BI Dashboard](./Healthcare%20Operations%20&%20Patient%20Analytics%20Dashboard.pbix)
 
 ## Dashboard Pages
 
@@ -294,7 +294,7 @@ CALCULATE(
 Healthcare-Operations-Patient-Analytics-PowerBI/
 │
 ├── README.md
-├── Healthcare_Operations_Patient_Analytics.pbix
+├── Healthcare Operations & Patient Analytics Dashboard.pbix
 │
 ├── Dataset/
 │   ├── Patients.csv
