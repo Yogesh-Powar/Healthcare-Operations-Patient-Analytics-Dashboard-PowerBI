@@ -1,0 +1,11 @@
+DepartmentID,DepartmentName,HeadDoctorID,BedCapacity
+1,Cardiology,1,60
+2,Neurology,6,45
+3,Orthopedics,11,55
+4,Pediatrics,16,50
+5,General Medicine,21,80
+6,Dermatology,26,35
+7,Gynecology,31,50
+8,Oncology,36,40
+9,ENT,41,30
+10,Emergency,46,70
